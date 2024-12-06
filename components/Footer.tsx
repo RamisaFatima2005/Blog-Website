@@ -5,7 +5,7 @@ export default function Footer() {
     <div><footer className="bg-zinc-900 text-white py-12">
     <div className="container mx-auto px-4 text-center">
       <div className="mb-6">
-        <h2 className="text-2xl font-semibold">Ramisa Fatima's Blog</h2>
+        <h2 className="text-2xl font-semibold">Ramisa Fatima&apos;s Blog</h2>
         <p className="text-sm mt-2 text-zinc-400">Your go-to place for HTML, Tailwind CSS, TypeScript, and Next.js tutorials and articles.</p>
       </div>
   

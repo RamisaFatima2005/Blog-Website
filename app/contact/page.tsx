@@ -27,7 +27,7 @@ const ContactPage = () => {
       <div className="container mx-auto px-4">
         <h1 className="text-4xl font-bold text-center text-fuchsia-800 mb-6">Contact Us</h1>
         <p className="text-lg text-center text-gray-700 mb-8">
-          We'd love to hear from you! Please fill out the form below with your message or questions.
+          We&apos;d love to hear from you! Please fill out the form below with your message or questions.
         </p>
         <form onSubmit={handleSubmit} className="max-w-lg mx-auto bg-zinc-300 p-8 rounded-md border border-black shadow-lg">
           <div className="mb-4">

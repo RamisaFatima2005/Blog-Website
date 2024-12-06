@@ -8,7 +8,7 @@ function Navbar() {
     <div>
         <nav className='flex justify-between bg-black h-20'>
             <div className='flex'>
-            <h1 className='text-fuchsia-700 font-bold text-3xl mt-5 mx-4'>Ramisa's</h1>
+            <h1 className='text-fuchsia-700 font-bold text-3xl mt-5 mx-4'>Ramisa&apos;s</h1>
             <p className='text-zinc-500 font-bold text-3xl mt-5 -mx-3'>.Blog</p>
             </div>
             <ul className='flex space-x-5'>

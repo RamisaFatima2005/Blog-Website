@@ -2,20 +2,20 @@
 import products from "@/data/allblogs";
 import { useRouter } from "next/navigation";
 import CommentSection from "@/components/Comment";  
+import Image from "next/image";
 
 const ProductDetailPage = ({ params }: { params: { id: string } }) => {
+    const route = useRouter();
     const product = products.find((p) => p.id === params.id);
 
     if (!product) {
         return <p>Product not found!</p>;
     }
 
-    const route = useRouter();
-
     return (
         <div className="bg-zinc-200 min-h-screen">
             <h1 className="text-5xl font-bold text-fuchsia-700 mx-5 py-6">{product.name}</h1>
-            <img src={product.image} alt={product.name} className="w-full h-80 object-cover my-4" />
+            <Image src={product.image} alt={product.name} width={500} height={500} className="w-full h-80 object-cover my-4" />
             <p className="text-lg">{product.description}</p>
             <br />
             <p className="text-lg">{product.description2}</p>

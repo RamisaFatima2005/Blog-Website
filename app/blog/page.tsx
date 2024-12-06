@@ -2,6 +2,7 @@
 import products from '@/data/allblogs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 export default function Blog() {
   const route= useRouter()
@@ -13,7 +14,7 @@ export default function Blog() {
             <div className="grid grid-cols-2 gap-4">
                 {products.map((product) => (
                     <div key={product.id} className="border p-4 rounded-md shadow-md">
-                        <img src={product.image} alt={product.name} className="w-full h-48 object-cover" />
+                        <Image src={product.image} alt={product.name} width={500} height={500} className="w-full h-48 object-cover" />
                         <h2 className="text-lg font-bold ">{product.name}</h2>
                         <Link href={`/products/${product.id}`}>
                             <button className="mt-2 bg-fuchsia-700 hover:bg-fuchsia-500 text-zinc-800 font-semibold px-4 py-2 rounded border border-zinc-500">

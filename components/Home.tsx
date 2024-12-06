@@ -19,8 +19,8 @@ export default function Homepage() {
 
       <div className="absolute top-1/2 text-white p-4">
         <h1 className="text-4xl font-bold mb-4 text-fuchsia-700">Hii,</h1>
-          <p className="text-6xl font-bold mb-4 text-zinc-500"> I'm Ramisa Fatima</p>
-        <p className="text-lg">Welcome to my blog, where you'll find insightful 
+          <p className="text-6xl font-bold mb-4 text-zinc-500"> I&apos;m Ramisa Fatima</p>
+        <p className="text-lg">Welcome to my blog, where you&apos;ll find insightful 
         <br/>articles, tips, and tutorials on all things web development. </p>
       </div>
 
