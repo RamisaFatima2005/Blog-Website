@@ -1,5 +1,4 @@
 "use client"
-import products from '@/data/allblogs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import products from "../../data/allblogs";
 import Image from "next/image";
 import allblogs from "../../data/allblogs";
 

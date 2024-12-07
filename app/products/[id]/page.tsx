@@ -1,5 +1,4 @@
 "use client"
-import products from "@/data/allblogs";
 import { useRouter } from "next/navigation";
 import CommentSection from "@/components/Comment";  
 import Image from "next/image";
