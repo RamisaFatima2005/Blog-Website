@@ -1,4 +1,13 @@
-const latestblogs = [
+interface BlogsType {
+    id: string;
+    name: string;
+    description: string;
+    description2: string;
+    description3: string;
+    image: string;
+  }
+
+const latestblogs:BlogsType[] = [
     {
         id: "1",
         name: "Tailwindcss",
