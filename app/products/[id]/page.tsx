@@ -3,25 +3,26 @@ import products from "@/data/allblogs";
 import { useRouter } from "next/navigation";
 import CommentSection from "@/components/Comment";  
 import Image from "next/image";
+import allblogs from "@/data/allblogs";
 
 const ProductDetailPage = ({ params }: { params: { id: string } }) => {
     console.log(params)
     const route = useRouter();
-    const product = products.find((p) => p.id === params.id);
+    const blog = allblogs.find((b) => b.id === params.id);
 
-    if (!product) {
+    if (!blog) {
         return <p>Product not found!</p>;
     }
 
     return (
         <div className="bg-zinc-200 min-h-screen">
-            <h1 className="text-5xl font-bold text-fuchsia-700 mx-5 py-6">{product.name}</h1>
-            <Image src={product.image} alt={product.name} width={500} height={500} className="w-full h-80 object-cover my-4" />
-            <p className="text-lg">{product.description}</p>
+            <h1 className="text-5xl font-bold text-fuchsia-700 mx-5 py-6">{blog.name}</h1>
+            <Image src={blog.image} alt={blog.name} width={500} height={500} className="w-full h-80 object-cover my-4" />
+            <p className="text-lg">{blog.description}</p>
             <br />
-            <p className="text-lg">{product.description2}</p>
+            <p className="text-lg">{blog.description2}</p>
             <br />
-            <p className="text-lg">{product.description3}</p>
+            <p className="text-lg">{blog.description3}</p>
             <br />
             <CommentSection />
             
