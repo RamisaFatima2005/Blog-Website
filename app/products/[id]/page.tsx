@@ -1,13 +1,14 @@
-"use client"
+"use client";
 import { useRouter } from "next/navigation";
-import CommentSection from "@/components/Comment";  
+import { use } from "react"; // use() function ko import karein
+import CommentSection from "@/components/Comment";
 import Image from "next/image";
 import allblogs from "@/data/allblogs";
 
-const ProductDetailPage = ({ params }: { params: { id: string } }) => {
-    console.log(params)
+const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
+    const resolvedParams = use(params); // params ko unwrap kar rahe hain
     const route = useRouter();
-    const blog = allblogs.find((b) => b.id === params.id);
+    const blog = allblogs.find((b) => b.id === resolvedParams.id); // resolvedParams se id access karein
 
     if (!blog) {
         return <p>Product not found!</p>;
@@ -24,7 +25,7 @@ const ProductDetailPage = ({ params }: { params: { id: string } }) => {
             <p className="text-lg">{blog.description3}</p>
             <br />
             <CommentSection />
-            
+
             <div className='flex items-center justify-center bg-zinc-300 py-10'>
                 <button onClick={() => route.push("/")} className='mt-2 bg-fuchsia-700 hover:bg-fuchsia-500 text-zinc-800 font-semibold px-4 py-2 rounded border border-zinc-500'>
                     Go Back
