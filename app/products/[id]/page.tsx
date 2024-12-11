@@ -1,12 +1,12 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { use } from "react"; // use() function ko import karein
+import { use } from "react"; 
 import CommentSection from "@/components/Comment";
 import Image from "next/image";
 import allblogs from "@/data/allblogs";
 
 const ProductDetailPage = ({ params }: { params: Promise<{ id: string }> }) => {
-    const resolvedParams = use(params); // params ko unwrap kar rahe hain
+    const resolvedParams = use(params); 
     const route = useRouter();
     const blog = allblogs.find((b) => b.id === resolvedParams.id); // resolvedParams se id access karein
 
